@@ -1,0 +1,202 @@
+<html lang="en">
+<head>
+  <title>About us page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <style>
+    .icon{
+  width: 4%;
+  height: 6%;
+}
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#myImg:hover {opacity: 0.7;}
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9); 
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body> 
+  <nav class="navbar navbar-expand-sm ">
+    <div class="container-fluid">
+      <h3 style="color: black;"><i>DoBu / Martial / Arts</i></h3>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Classes
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="FitnessTraining.html">Fitness Training</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="Self-defence.html">Self-defence</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Instructors.html">Instructours</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Schedule
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="FitnessSchedule.html">Fitness Schedule</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="Self-defenceSchedule.html">Self-defence Schedule</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Facility.html">Facility</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Aboutus.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Privacypolicy.html">Privacy policy</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="text" placeholder="Search">
+        </form>
+      </div>
+    </div>
+  </nav>
+  <h1 style="background-color: black; color: white; text-align: center; height: 12%;">THERE IS SO MUCH TO KNOW</h1><br>
+  <h1 style="color: black;">WELLNESS FOR LIFE</h1>
+  <h5 style="color: black;"> DoBu Martial Arts started in 2000, we hava set ourselves apart 
+  form just being a normal fitness chain to a luxury fitness faciltity<br> that careates
+  an exceptional experience for out members!</h5><br>
+    <img src="image/home.jpg" style="width: 100%; height: 70%;"><br><br>
+    <h1 style="background-color: black; color: white; text-align: center; height: 12%;">WHAT WE VALUE MOST</h1><br>
+    <h1 style="color: #000;"><b>R</b>_elationship</h1>
+    <h4 style="color: #000;">We pride ourselves to build relationship, not business
+        eccekkence.</h4><br><br>
+    <h1 style="color: #000;"><b>E</b>_xcellence</h1>
+    <h4 style="color: #000;">We will strive to be consistent in delivering high quality service
+            accountabulity.</h4><br><br>
+    <h1 style="color: #000;"><b>A</b>_ccontability</h1>
+    <h4 style="color: #000;">We take ownership and deliver on our commitment.</h4><br><br>
+
+    <img id="myImg" src="https://cdn.shopify.com/s/files/1/2375/6415/files/IMG_3424_grande.JPG?v=1507222372" style="margin-left: 30%; width: 40%; height: 70%;">
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+    <h2 style="margin-left: 40%; color: #000;">Mauricio Gomez</h2>
+    <h4 style="margin-left: 33%; color: #000;">(gym owner/head martial arts coach)</h4>
+    
+    
+
+<footer class="bg-light text-center text-white, background-color: #0082ca;" >
+    <div class="text-center p-3">
+      <h4 style="color: #000;" >CONTACT US</h4><br>
+      <p>
+          <b>Phone:</b>  +95-123-386-485<br>
+          <b>Email:</b>  dobu@dobumartrialarts.com<br>
+          <b>Adress:</b> 4355 Durham Landing Morristown, TN 37814
+      </p>
+      <section class="col">
+        
+        <a href="https://web.facebook.com/login/?_rdc=1&_rdr"><img src="image/facebook.png" class="icon"></a>
+        <a href="https://twitter.com/i/flow/login"><img src="image/instagram.png" class="icon"></a>
+        <a href="https://www.linkedin.com/login"><img src="image/linkedin.png" class="icon"></a>
+        
+      </section>
+      
+    </div>
+   
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">DoBuMartialArts.com</a>
+    </div>
+    
+  </footer>
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+    </script>
+</body>
+</html>
